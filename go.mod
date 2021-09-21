@@ -1,4 +1,4 @@
-module github.com/arrayJY/go-im-server
+module github.com/arrayJY/lite-im-server
 
 go 1.17
 
