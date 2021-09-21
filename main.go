@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/arrayJY/go-im-server/services"
+	"github.com/arrayJY/lite-im-server/services"
 	"github.com/emicklei/go-restful/v3"
 	"log"
 	"net/http"

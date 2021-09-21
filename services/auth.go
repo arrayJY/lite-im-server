@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/arrayJY/go-im-server/models"
+	"github.com/arrayJY/lite-im-server/models"
 	"github.com/emicklei/go-restful/v3"
 	"github.com/golang-jwt/jwt"
 	"time"
