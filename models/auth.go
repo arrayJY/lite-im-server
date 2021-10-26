@@ -3,7 +3,7 @@ package models
 import "github.com/golang-jwt/jwt"
 
 type AccessTokenClaims struct {
-	Id string `json:"id"`
+	Id uint `json:"id"`
 	jwt.StandardClaims
 }
 type RefreshTokenClaims struct {
@@ -26,7 +26,7 @@ type ErrorResponse struct {
 }
 
 type TokenResponse struct {
-	Token        string `json:"token"`
+	AccessToken  string `json:"access_token"`
 	Expires      int64  `json:"expires"`
 	RefreshToken string `json:"refresh_token"`
 }

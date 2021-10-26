@@ -2,9 +2,7 @@ package main
 
 import (
 	"github.com/arrayJY/lite-im-server/services"
-	"github.com/emicklei/go-restful/v3"
-	"log"
-	"net/http"
+	"github.com/gin-gonic/gin"
 )
 
 // This example shows the minimal code needed to get a restful.WebService working.
@@ -12,6 +10,10 @@ import (
 // GET http://localhost:8080/hello
 
 func main() {
-	restful.Add(services.AuthService())
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	r := gin.Default()
+
+	r.POST("/token", services.CreateToken)
+	r.PATCH("/token", services.RefreshToken)
+
+	r.Run()
 }
